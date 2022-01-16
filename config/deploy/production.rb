@@ -1,6 +1,9 @@
 server 'my-server', user: 'deploy', roles: %w{app db web}
 
 set :branch, 'main'
+set :rails_env, :production
+set :pty, true
+set :puma_systemctl_user, :user
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
