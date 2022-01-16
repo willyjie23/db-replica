@@ -18,8 +18,14 @@ default: &default
   socket: /tmp/mysql.sock
 
 development:
-  <<: *default
-  database: db_replica_development
+  primary:
+    <<: *default
+    database: primary_db
+  primary_replica:
+    <<: *default
+    database: primary_db
+    replica: true
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

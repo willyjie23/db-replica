@@ -109,6 +109,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    makara (0.5.1)
+      activerecord (>= 5.2.0)
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -223,6 +225,7 @@ DEPENDENCIES
   debug
   jbuilder
   jsbundling-rails
+  makara
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rails (~> 7.0.1)
