@@ -66,6 +66,15 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'makara'
+
+  # deploy
+  gem "capistrano", "~> 3.15.0", require: false
+  gem "capistrano-rails", "~> 1.4", require: false
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+  gem "capistrano-bundler", "~> 1.6", require: false
+  gem "capistrano3-puma", "~> 5.0.4", require: false
+  gem "capistrano-rails-console", require: false
+  gem "capistrano-upload-config", require: false
 end
 
 group :test do
