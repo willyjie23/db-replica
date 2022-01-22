@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     ApplicationRecord.connected_to(role: :reading, prevent_writes: true) do
-      @posts = Post.all
+      @posts = Post.all.reload
+      count = Post.count
     end
   end
 
